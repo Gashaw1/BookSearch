@@ -1,6 +1,9 @@
-﻿namespace BookModelsLayer.Models
+﻿using System.Collections.Generic;
+
+namespace BookModelsLayer.Models
 {
-    public class Authors
+    public class Authors    
     {
+        public List<string> authors { get; set; }      
     }
 }

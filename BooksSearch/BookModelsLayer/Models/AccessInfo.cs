@@ -17,9 +17,11 @@
 
     public class Pdf
     {
+        public bool Isabaliable { get; set; }
     }
 
     public class Epub
     {
+        public bool IsAvaliable { get; set; }
     }
 }
