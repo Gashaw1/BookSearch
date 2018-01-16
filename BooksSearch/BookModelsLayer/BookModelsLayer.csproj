@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Models\AccessInfo.cs" />
     <Compile Include="Models\Authors.cs" />
-    <Compile Include="Models\Catagorie.cs" />
+    <Compile Include="Models\ImageLinks.cs" />
     <Compile Include="Models\IndustryIdentifier.cs" />
     <Compile Include="Models\ReadingModes.cs" />
     <Compile Include="Models\SaleInfo.cs" />

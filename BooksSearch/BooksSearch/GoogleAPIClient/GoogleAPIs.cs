@@ -13,7 +13,7 @@ namespace BooksSearch.GoogleAPIClient
     public class GoogleAPIs
     {
         const string baseurl = "https://www.googleapis.com";
-        //api caller fro catagorys
+        //api caller for default parm return all
         public static async Task<List<items>> Results()
         {
             var bookResult = new List<items>();
