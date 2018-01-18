@@ -18,7 +18,7 @@ namespace BooksSearch.Controllers
             result = await GoogleAPIs.Results();
             return View(result.ToList());
         }
-
+        //Test barnch
         public async Task<PartialViewResult> Index2(string userInput)
         {
             var result = new List<items>();
