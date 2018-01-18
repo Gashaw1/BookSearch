@@ -58,38 +58,37 @@ namespace BooksSearch.GoogleAPIClient
             return finale;
         }
 
+        //api caller fro catagorys
+        public static async Task<List<items>> Results(string userInput) 
+        {
+            var bookResult = new List<items>();
+
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseurl);
+
+                client.DefaultRequestHeaders.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage Res = await client.GetAsync("/books/v1/volumes?q=" + userInput);
+
+                if (Res.IsSuccessStatusCode)
+                {
+                    string catagoryResponse = Res.Content.ReadAsStringAsync().Result;
+
+                    string TrimedRsponse = JsonTrimer(catagoryResponse);//remov extra bress
+                    int ind = TrimedRsponse.Length - 2;
+                    var finals = TrimedRsponse.Remove(ind);
+                    string myfinalTrim = finals;
+                    var js = new JavaScriptSerializer();
+
+                    bookResult = (List<items>)js.Deserialize(myfinalTrim, typeof(List<items>));
 
 
 
-
-
-        ////api caller fro catagorys
-        //public static async Task<List<items>> Results(dynamic userInput)
-        //{
-        //    var bookResult = new List<items>();
-
-        //    using (var client = new HttpClient())
-        //    {
-        //        client.BaseAddress = new Uri(baseurl);
-
-        //        client.DefaultRequestHeaders.Clear();
-        //        client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        HttpResponseMessage Res = await client.GetAsync("v1/volumes?q=" + userInput);
-
-        //        if (Res.IsSuccessStatusCode)
-        //        {
-        //            var catagoryResponse = Res.Content.ReadAsStringAsync().Result;
-
-        //            string TrimedRsponse = JsonTrimer(catagoryResponse);//remov extra bress
-        //            string myTrime = TrimedRsponse.TrimEnd('}');
-        //            var js = new JavaScriptSerializer();
-
-        //            bookResult = (List<items>)js.Deserialize(myTrime, typeof(List<items>));
-
-        //        }
-        //        return bookResult.ToList();
-        //    }
-        //}
+                }
+                return bookResult.ToList();
+            }
+        }
     }
 }

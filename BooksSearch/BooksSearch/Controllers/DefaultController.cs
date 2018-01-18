@@ -15,8 +15,15 @@ namespace BooksSearch.Controllers
         public async Task<ActionResult> Index()
         {
             var result = new List<items>();
-             result = await GoogleAPIs.Results();   
+            result = await GoogleAPIs.Results();
             return View(result.ToList());
+        }
+
+        public async Task<PartialViewResult> Index2(string userInput)
+        {
+            var result = new List<items>();
+            result = await GoogleAPIs.Results(userInput);
+            return PartialView(result.ToList());
         }
     }
 }
