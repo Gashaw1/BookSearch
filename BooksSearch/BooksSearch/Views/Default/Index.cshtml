@@ -10,6 +10,10 @@
 </div>
 
 <hr />
+<div>
+    @Html.Partial("_pView")
+    
+</div>
 
 <div class="row" style="width:100%;margin: 0; padding: 10px;  position: relative;">
     @foreach (var item in Model)
@@ -50,92 +54,6 @@
 
 
 
-
-
-@*<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.kind)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.etag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.selfLink)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.volumeInfo.imageLinks)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.kind)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.etag)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.selfLink)
-                </td>
-
-                <td>
-                    <div style="width:170px; height:150px; margin:0 auto; margin-top:20px;">
-                        @{
-                            var imgSrc = item.volumeInfo.imageLinks.thumbnail;
-
-                        }
-                        <img src="@imgSrc" style="height:150px; width:100%;" />
-                    </div>
-
-                </td>
-
-                <td>
-
-                    @Html.DisplayFor(modelItem => item.volumeInfo.imageLinks.smallThumbnail)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.volumeInfo.imageLinks.thumbnail)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-            </tr>
-        }
-
-    </table>*@
-@*<ul>
-        @foreach (var item in Model)
-        {
-
-            <li style="display:inline-block; background-color:white;  box-shadow: 1px 0px 10px lightgray; border:1px solid lightgray; width:200px; height:300px; margin:5px;color:GrayText; margin-bottom:20px; margin-top:20px; ">
-                <div style="width:150px; height:150px; margin:0 auto; margin-top:20px;">
-                    @{
-                        var imgSrc = item.volumeInfo.imageLinks.thumbnail;
-                    }
-                    <img src="@imgSrc" style="height:150px; width:100%;" />
-                </div>
-
-                <div style="height:150px; width:150px; margin:0 auto; overflow:hidden">
-                    <br />
-                    <strong>@Html.DisplayFor(modelItem => item.volumeInfo.pageCount)</strong>
-                    <p style="color:darkblue">@Html.DisplayFor(modelItem => item.volumeInfo.title)</p>
-
-
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) <br />
-
-                </div>
-            </li>
-
-                        }
-    </ul>*@
 
 
 

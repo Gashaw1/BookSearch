@@ -22,8 +22,8 @@ namespace BooksSearch.Controllers
         public async Task<PartialViewResult> Index2(string userInput)
         {
             var result = new List<items>();
-            result = await GoogleAPIs.Results(userInput);
-            return PartialView(result.ToList());
+            result = await GoogleAPIs.Results("Biology");
+            return PartialView("_pView", result.ToList());
         }
     }
 }
