@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\obj\Debug\WebServiceProject.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\bin\Debug\WebServiceProject.dll
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\bin\Debug\WebServiceProject.pdb
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\bin\Debug\BookModelsLayer.dll
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\bin\Debug\BookModelsLayer.pdb
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\obj\Debug\WebServiceProject.dll
+C:\Users\User\Desktop\BookSearch\BooksSearch\WebServiceProject\obj\Debug\WebServiceProject.pdb

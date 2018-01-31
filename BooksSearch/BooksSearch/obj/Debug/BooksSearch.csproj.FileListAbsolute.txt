@@ -94,3 +94,5 @@ C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\bin\System.Web.Mvc.xml
 C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\obj\Debug\BooksSearch.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\obj\Debug\BooksSearch.dll
 C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\obj\Debug\BooksSearch.pdb
+C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\bin\WebServiceProject.dll
+C:\Users\User\Desktop\BookSearch\BooksSearch\BooksSearch\bin\WebServiceProject.pdb

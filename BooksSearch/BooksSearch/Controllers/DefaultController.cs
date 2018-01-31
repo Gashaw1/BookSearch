@@ -1,11 +1,9 @@
 ﻿using BookModelsLayer.Models;
-using BooksSearch.GoogleAPIClient;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Mvc;
+using WebServiceProject;
 
 namespace BooksSearch.Controllers
 {

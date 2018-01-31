@@ -148,7 +148,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="GoogleAPIClient\GoogleAPIs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -176,6 +175,10 @@
     <ProjectReference Include="..\BookModelsLayer\BookModelsLayer.csproj">
       <Project>{6fd094d1-7faf-4a31-9ed0-825295838d8a}</Project>
       <Name>BookModelsLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebServiceProject\WebServiceProject.csproj">
+      <Project>{01DDA4C9-B197-4236-89F8-B2FB8D042CDD}</Project>
+      <Name>WebServiceProject</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

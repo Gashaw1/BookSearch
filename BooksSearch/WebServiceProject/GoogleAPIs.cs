@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Script.Serialization;
 
-namespace BooksSearch.GoogleAPIClient
+namespace WebServiceProject
 {
     public class GoogleAPIs
     {
@@ -32,7 +32,7 @@ namespace BooksSearch.GoogleAPIClient
                     string catagoryResponse = Res.Content.ReadAsStringAsync().Result;
 
                     string TrimedRsponse = JsonTrimer(catagoryResponse);//remov extra bress
-                    int ind = TrimedRsponse.Length-2;
+                    int ind = TrimedRsponse.Length - 2;
                     var finals = TrimedRsponse.Remove(ind);
                     string myfinalTrim = finals;
                     var js = new JavaScriptSerializer();
@@ -59,7 +59,7 @@ namespace BooksSearch.GoogleAPIClient
         }
 
         //api caller fro catagorys
-        public static async Task<List<items>> Results(string userInput) 
+        public static async Task<List<items>> Results(string userInput)
         {
             var bookResult = new List<items>();
 
@@ -92,3 +92,4 @@ namespace BooksSearch.GoogleAPIClient
         }
     }
 }
+
