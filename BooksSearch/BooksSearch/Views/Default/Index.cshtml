@@ -6,7 +6,16 @@
 <h2>Index</h2>
 
 <div style="width:100%; text-align:right">
-    <input id="userInput" type="text" style="width:90%; height:40px;" />   <input id="Submit1" type="submit" onclick="myFun()" value="submit" style="height:40px;" />
+    @*<input id="userInput" type="text" style="width:90%; height:40px;" />   <input id="Submit1" type="submit" onclick="myFun()" value="submit" style="height:40px;" />*@
+    @using (Html.BeginForm())
+            {
+        <p>
+             @Html.TextBox("search", null, new { @style = "width:90%; height:40px;" })
+
+            <input type="submit" value="Search" style="height:40px;" />
+        </p>
+
+    }
 </div>
 
 <hr />

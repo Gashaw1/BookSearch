@@ -10,18 +10,28 @@ namespace BooksSearch.Controllers
     public class DefaultController : Controller
     {
         // GET: Default
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string search)
         {
-            var result = new List<items>();
-            result = await GoogleAPIs.Results();
-            return View(result.ToList());
+            if (search != null)
+            {
+                var result = new List<items>();
+                result = await GoogleAPIs.Results(search);
+                return View(result.ToList());
+            }
+            else
+            {
+                var result = new List<items>();
+                result = await GoogleAPIs.Results();
+                return View(result.ToList());
+            }
+          
         }
 
-        public async Task<PartialViewResult> Index2(string userInput)
-        {
-            var result = new List<items>();
-            result = await GoogleAPIs.Results(userInput);
-            return PartialView(result.ToList());
-        }
+        //public async Task<PartialViewResult> Index2(string userInput)
+        //{
+        //    var result = new List<items>();
+        //    result = await GoogleAPIs.Results(userInput);
+        //    return PartialView(result.ToList());
+        //}
     }
 }

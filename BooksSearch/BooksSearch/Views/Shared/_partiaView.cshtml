@@ -9,6 +9,17 @@
 
 <div style="width:100%; text-align:right">
     <input id="userInput" type="text" style="width:90%; height:40px;" />   <input id="Submit1" type="submit" onclick="myFun()" value="submit" style="height:40px;" />
+
+    @using (Html.BeginForm())
+            {
+        <p>
+            Title: @Html.TextBox("search", new { @style = "height:40px;width:90%" })<br />
+
+            <input type="submit" value="Filter" style="height:40px;" />
+        </p>
+
+    }
+
 </div>
 
 <hr />
