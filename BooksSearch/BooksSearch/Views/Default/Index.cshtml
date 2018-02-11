@@ -10,7 +10,7 @@
     @using (Html.BeginForm())
             {
         <p>
-             @Html.TextBox("search", null, new { @style = "width:90%; height:40px;" })
+            @Html.TextBox("search", null, new { @style = "width:90%; height:40px;" })
 
             <input type="submit" value="Search" style="height:40px;" />
         </p>
@@ -25,10 +25,18 @@
     {
         <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2" style="display:inline-block; background-color:white;box-shadow: 1px 0px 10px lightgray; border:1px solid lightgray; height:auto;margin-top:30px;margin-right:12px;margin-left:0px;">
             <div style="padding-top:10px; border-bottom:1px solid lightgray; text-align:center; float:left;height:220px;">
-                @{
+                @if (item.volumeInfo.imageLinks != null)
+                {
+
                     var imgSrc = item.volumeInfo.imageLinks.smallThumbnail;
+                    <img src="@imgSrc" />
                 }
-                <img src="@imgSrc" />
+                else
+                {
+
+                    //<img src="@imgSrc" />
+                }
+
 
             </div>
 
@@ -49,7 +57,7 @@
             </div>
         </div>
 
-                    }
+    }
 </div>
 
 
