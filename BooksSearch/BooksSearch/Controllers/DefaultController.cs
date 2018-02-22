@@ -27,11 +27,11 @@ namespace BooksSearch.Controllers
           
         }
 
-        //public async Task<PartialViewResult> Index2(string userInput)
-        //{
-        //    var result = new List<items>();
-        //    result = await GoogleAPIs.Results(userInput);
-        //    return PartialView(result.ToList());
-        //}
+        public async Task<PartialViewResult> Index2(string search)
+        {
+            var result = new List<items>();
+            result = await GoogleAPIs.Results(search);
+            return PartialView(result.ToList());
+        }
     }
 }

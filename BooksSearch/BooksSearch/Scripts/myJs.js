@@ -21,3 +21,17 @@ function myFun()
 }
 
 
+$(document).ready(function () {
+    $("#Text1").keydown(function () {
+        var searchText = $(this).val();
+        debugger
+        $.ajax({
+            type: "Post",
+            url: "/Default/Index?search=" + searchText,
+            contentType: "html",
+            success: function (response) {
+                $("#resultDiv").html(response);
+            }
+        })
+    })
+})
